@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Tic-Tac-Toe></title>
+
+
+ <!-- Link to Bootstrap CSS for styling -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="style.css">
+    
+ <!-- Internal CSS for custom styles -->
+ <style>
+     /* Styling for the Tic-Tac-Toe grid container */
+     .tic-tac-toe-grid {
+         display: grid; /* Use CSS Grid layout */
+         grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+         gap: 10px; /* Space between grid items */
+         max-width: 300px; /* Maximum width of the grid */
+         margin: 20px auto; /* Center the grid with margin */
+     }
+     
+     /* Styling for each cell in the Tic-Tac-Toe grid */
+     .tic-tac-toe-cell {
+         width: 100px; /* Fixed width for each cell */
+         height: 100px; /* Fixed height for each cell */
+         display: flex; /* Use Flexbox for centering content */
+         align-items: center; /* Vertically center content */
+         justify-content: center; /* Horizontally center content */
+         font-size: 2rem; /* Large font size for X and O */
+         border: 1px solid #000; /* Black border around each cell */
+     }
+ </style>
+</head>
+<body>
+ <!-- Main container for the game, centered and styled with Bootstrap -->
+ <div class="container text-center">
+     <!-- Heading to indicate the current player's turn -->
+     <h1 id="turn-indicator">X's Turn</h1>
+     
+     <!-- Grid container for the Tic-Tac-Toe cells -->
+     <div class="tic-tac-toe-grid">
+         <!-- Individual cells in the grid, each with a data attribute for JavaScript targeting -->
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+         <div class="tic-tac-toe-cell" data-cell></div>
+     </div>
+     
+     <!-- Button to restart the game, styled with Bootstrap -->
+     <button id="restart-button" class="btn btn-primary mt-3">Restart Game</button>
+     
+     <!-- Container for displaying alerts or messages -->
+     <div id="alert-container"></div>
+ </div>
+ 
+ <!-- jQuery library for DOM manipulation and event handling -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+ <!-- Bootstrap JavaScript for additional functionality -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ <!-- External JavaScript file for game logic -->
+ <script src="app.js"></script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node-modules/jquery/dist/jquery.js"></script>
+<script src="app.js"></script>
